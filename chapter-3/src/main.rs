@@ -1,7 +1,9 @@
 fn main() {
     let array = [1,2,3,4,5];
-    let index = 10;
 
-    let element = array[index];
-    println!("the value of 2nd item: {}", element);
+    print_second_value(array[0]);
+}
+
+fn print_second_value(x: i32) {
+    println!("the second value is: {}", x);
 }
