@@ -1,9 +1,9 @@
 fn main() {
-    let array = [1,2,3,4,5];
+    let y = {
+        let x = 3;
 
-    print_second_value(array[0]);
-}
+        x + 1
+    };
 
-fn print_second_value(x: i32) {
-    println!("the second value is: {}", x);
+    println!("The value of y is: {}", y);
 }
