@@ -1,33 +1,30 @@
-struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool,
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
 }
 
-struct Color(i32, i32, i32);
-struct Point(i32, i32, i32);
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
 
-fn build_user(email: String, username: String) -> User {
-    User {
-        email,
-        username,
-        active: true,
-        sign_in_count: 1
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+
+    fn square(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size }
     }
 }
 
 fn main() {
-    let user1 = build_user(String::from("someone@example.com"), String::from("someusername"));
-    let user2 = User {
-        email: String::from("another@example.com"),
-        username: String::from("anotheruser"),
-        ..user1
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
     };
-    let black = Color(0, 0, 0);
-    let origin = Point(0, 0, 0);
 
-    println!("user 1: {}", user1.email);
-    println!("user 2: {}", user2.email);
-    println!("black: {}", black.0);
+    println!("rectangle: {:#?}", rect1);
+    println!("area: {} square pixels", rect1.area());
+    println!("square: {:#?}", Rectangle::square(5));
 }
