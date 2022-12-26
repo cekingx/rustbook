@@ -1,3 +1,7 @@
-mod client;
+pub mod client;
 
-mod network;
+pub mod network;
+
+pub fn message() {
+  println!("some string from library");
+}
