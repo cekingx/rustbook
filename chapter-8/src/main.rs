@@ -1,7 +1,9 @@
+use std::collections::HashMap;
+
 fn main() {
-    let s1 = String::from("hello, ");
-    let s2 = String::from("world");
-    let s3 = format!("{}-{}", s1, s2);
-    println!("s3: {}", s3);
-    println!("s1: {}", s1);
+    let teams = vec![String::from("Blue"), String::from("Yellow")];
+    let initial_scores = vec![10, 50];
+    let scores: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
+
+    println!("hashmap: {:?}", scores);
 }
