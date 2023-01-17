@@ -1,13 +1,23 @@
-use std::{io::{self, Read}, fs::File};
+pub struct Guess {
+    value: u32,
+}
 
-fn read_username_from_file() -> Result<String, io::Error> {
-    let mut s = String::new();
+impl Guess {
+    pub fn new(value: u32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Guess value must be between 1 and 100, got {}", value);
+        }
 
-    File::open("hello.txt")?.read_to_string(&mut s)?;
-    Ok(s)
+        Guess {
+            value
+        }
+    }
+
+    pub fn value(&self) -> u32 {
+        self.value
+    }
 }
 
 fn main() {
-    let result = read_username_from_file();
-    println!("result: {:?}", result);
+
 }
