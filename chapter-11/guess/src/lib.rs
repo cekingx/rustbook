@@ -1,5 +1,19 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+pub struct Guess {
+    value: u32,
+}
+
+impl Guess {
+    pub fn new(value: u32) -> Guess {
+        if value < 1 {
+            panic!("Guess value must greater than or equal to 1, got {}.", value);
+        } else if value > 100 {
+            panic!("Guess value must be less than or equal to 100, got {}.", value);
+        }
+
+        Guess {
+            value
+        }
+    }
 }
 
 #[cfg(test)]
@@ -7,8 +21,8 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    #[should_panic(expected = "Guess value must be less than or equal to 100")]
+    fn greater_than_100() {
+        Guess::new(200);
     }
 }
