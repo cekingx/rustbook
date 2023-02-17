@@ -8,6 +8,13 @@ impl Rectangle {
     pub fn can_hold(&self, other: &Rectangle) -> bool {
         self.length > other.length && self.width > other.width
     }
+
+    pub fn create(length: u32, width: u32) -> Rectangle {
+        Rectangle {
+            length,
+            width
+        }
+    }
 }
 
 #[cfg(test)]
