@@ -7,12 +7,18 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_adds_two() {
+    fn add_two_and_two() {
         assert_eq!(4, add_two(2));
     }
 
     #[test]
-    fn it_not_adds_three() {
-        assert_ne!(5, add_two(2));
+    fn add_three_and_two() {
+        assert_eq!(5, add_two(3));
+    }
+
+    #[test]
+    #[ignore]
+    fn one_hundred() {
+        assert_eq!(102, add_two(100));
     }
 }
