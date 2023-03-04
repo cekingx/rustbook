@@ -1,3 +1,8 @@
+use art::PrimaryColor;
+use art::mix;
+
 fn main() {
-    println!("Hello user by cekingx");
+    let red = PrimaryColor::Red;
+    let yellow = PrimaryColor::Yellow;
+    mix(red, yellow);
 }
