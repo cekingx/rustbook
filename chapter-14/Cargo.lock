@@ -3,12 +3,12 @@
 version = 3
 
 [[package]]
-name = "art"
+name = "art-example-cekingx"
 version = "0.1.0"
 
 [[package]]
 name = "chapter-14"
 version = "0.1.0"
 dependencies = [
- "art",
+ "art-example-cekingx",
 ]
