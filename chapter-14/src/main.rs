@@ -1,5 +1,5 @@
-use art::PrimaryColor;
-use art::mix;
+use art_example_cekingx::PrimaryColor;
+use art_example_cekingx::mix;
 
 fn main() {
     let red = PrimaryColor::Red;
