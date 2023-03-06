@@ -1,5 +1,8 @@
 [package]
 name = "art-example-cekingx"
+license = "MIT"
+authors = ["Dirga Yasa <cekingx@gmail.com>"]
+description = "A simple package to learn about how to publish package to crates.io"
 version = "0.1.0"
 edition = "2021"
 
