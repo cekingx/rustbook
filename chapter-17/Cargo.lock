@@ -11,4 +11,9 @@ name = "chapter-17"
 version = "0.1.0"
 dependencies = [
  "averaged-collection",
+ "gui-like",
 ]
+
+[[package]]
+name = "gui-like"
+version = "0.1.0"

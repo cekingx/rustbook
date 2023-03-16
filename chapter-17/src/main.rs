@@ -1,8 +1,36 @@
-use averaged_collection::AveragedCollection;
+use gui_like::{Draw, Button, Screen};
+
+struct SelectBox {
+    width: u32,
+    height: u32,
+    options: Vec<String>,
+}
+
+impl Draw for SelectBox {
+    fn draw(&self) {
+        println!("draw select box");
+    }
+}
 
 fn main() {
-    let mut collection = AveragedCollection::new();
-    collection.add(1);
-    collection.add(2);
-    println!("the average: {}", collection.average());
+    let screen = Screen {
+        components: vec![
+            Box::new(SelectBox {
+                width: 75,
+                height: 10,
+                options: vec![
+                    String::from("Yes"),
+                    String::from("Maybe"),
+                    String::from("No")
+                ]
+            }),
+            Box::new(Button {
+                width: 50,
+                height: 10,
+                label: String::from("Ok"),
+            })
+        ]
+    };
+
+    screen.run();
 }
