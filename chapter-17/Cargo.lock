@@ -7,10 +7,15 @@ name = "averaged-collection"
 version = "0.1.0"
 
 [[package]]
+name = "blog"
+version = "0.1.0"
+
+[[package]]
 name = "chapter-17"
 version = "0.1.0"
 dependencies = [
  "averaged-collection",
+ "blog",
  "gui-like",
 ]
 

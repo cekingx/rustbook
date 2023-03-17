@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 averaged-collection = { path = "./averaged-collection" }
 gui-like = { path = "./gui-like" }
+blog = { path = "./blog" }
