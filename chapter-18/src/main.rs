@@ -6,6 +6,6 @@ struct Point {
 fn main() {
     let p = Point {x: 0, y: 7};
 
-    let Point { x: a, y: b } = p;
-    println!("a: {a}, b: {b}");
+    let Point { x, y} = p;
+    println!("x: {x}, y: {y}");
 }
