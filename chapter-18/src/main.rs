@@ -1,7 +1,8 @@
 fn main() {
-    let x = 5;
+    let x = 'c';
     match x {
-        1..=5 => println!("one through five"),
+        'a'..='j' => println!("early ASCII letter"),
+        'k'..='z' => println!("late ASCII letter"),
         _ => println!("something else")
     }
 }
